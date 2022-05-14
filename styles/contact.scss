@@ -1,0 +1,17 @@
+@import "variables";
+
+.contact-box {
+  width: 80vw;
+  text-align: center;
+  padding: 2vw 6vw 2vw 6vw;
+  background-color: $base-light;
+  border: 2px solid black;
+  font-size: 110%;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-box {
+    width: 50vw;
+    font-size: 130%;
+  }
+}

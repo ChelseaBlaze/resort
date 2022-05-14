@@ -1,0 +1,170 @@
+@import "variables", "contact", "home", "navbar", "booking";
+
+body,
+html {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  font-size: 100%;
+  background: transparent;
+  color: black;
+  font-family: LucymarSansRegular, serif, sans-serif;
+}
+
+main {
+  width: 100vw;
+  padding: 0 0 5vh 0;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h1 {
+    font-size: 380%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    h1 {
+      font-size: 200%;
+    }
+  }
+}
+
+h1 {
+  color: $base-teal;
+  font-family: LucymarSansRegular, serif, sans-serif;
+  font-size: 5vw;
+  font-weight: normal;
+}
+
+p {
+  font-size: 110%;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 1vh 0 2vh 0;
+  bottom: 0;
+  left: 0;
+  i {
+    font-size: 4vh;
+    color: $base-teal;
+    padding: 0 1vw 0 1vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+/*@media screen and (max-width: 767px) {
+  footer {
+    padding-top: 10vh;
+  }
+}
+*/
+
+//Pages with half-screen videos (island, accommodations, contact).
+
+.halfscreenvideo {
+  margin-top: 8vh;
+  width: 100vw;
+}
+
+//Carousel image slider (island and accommodations pages)
+
+.slider-container {
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.carousel-container {
+  width: 50%;
+  margin: auto; //centers the slider container
+  border: 2px solid white;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+#prevBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 10%;
+  font-size: 5vw;
+  color: black;
+  cursor: pointer;
+  color: $base-teal;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 10%;
+  font-size: 5vw;
+  color: black;
+  cursor: pointer;
+  color: $base-teal;
+}
+
+@media screen and (max-width: 767px) {
+  .slider-container {
+    width: 100%;
+  }
+
+  .carousel-container {
+    width: 100%;
+  }
+
+  .carousel-slide {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .slider-container {
+    width: 85%;
+  }
+
+  .carousel-container {
+    width: 55%;
+  }
+
+  .carousel-slide {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  main {
+    .slider-container {
+      width: 70%;
+    }
+
+    .carousel-container {
+      width: 50%;
+    }
+
+    .carousel-slide {
+      width: 100%;
+    }
+  }
+}

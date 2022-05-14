@@ -1,0 +1,90 @@
+@import "variables";
+
+.mainvideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#mainhome {
+  width: 100vw;
+  height: 92vh;
+  padding: 5vh 0 0 0;
+  margin: 0 0 0 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  h1 {
+    position: fixed;
+    left: 0;
+    top: 45%;
+  }
+}
+
+#title {
+  font-size: 400%;
+  padding-left: 3vw;
+  color: white;
+  animation-name: title;
+  animation-duration: 3s;
+  animation-timing-function: ease-in; //slow start to animation
+}
+
+@keyframes title {
+  from {
+    color: transparent;
+  }
+  to {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #mainhome {
+    h1 {
+      font-size: 300%;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #mainhome {
+    h1 {
+      font-size: 500%;
+    }
+  }
+}
+
+#home-footer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  i {
+    font-size: 4vh;
+    color: $base-teal;
+    padding: 0 1vw 2vh 1vw;
+    animation-name: footer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in; //slow start to animation
+    animation-delay: 1s;
+    animation-fill-mode: backwards; //keeps the text transparent (the color in the first frame) until the end of the delay period. Basically keeps it hidden.
+  }
+}
+
+@keyframes footer {
+  from {
+    color: transparent;
+  }
+  to {
+    color: $base-teal;
+  }
+}

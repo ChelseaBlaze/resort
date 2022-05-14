@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="description" content="Booking">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/lucymar-sans" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f4115f73f.js" crossorigin="anonymous"></script>
+    <title>Booking - Isla Tranquila</title>
+  </head>
+  <body>
+    <div>
+        <nav class="container-nav">
+            <div class ="navbox1">
+                <a href="/index.html">Isla Tranquila</a>
+            </div>
+            <div class="navbox2">
+                <a href="/index.html">Home</a>
+                <a href="../pages/theIsland.html">The Island</a>
+                <a href="../pages/accommodations.html">Accommodations</a>   
+                <a href="../pages/contact.html">Contact</a> 
+                <a href="../pages/booking.html">Booking</a>  
+            </div>
+        </nav>
+        <div class="container-burger-nav">   
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+            <a href="/index.html">Isla Tranquila</a>
+            <nav class="mobile-nav">
+                <a href="/index.html">Home</a>
+                <a href="../pages/theIsland.html">The Island</a>
+                <a href="../pages/accommodations.html">Accommodations</a>   
+                <a href="../pages/contact.html">Contact</a> 
+                <a href="../pages/booking.html">Booking</a>
+            </nav>
+        </div> 
+    </div>
+    <section class="main-booking">
+      <h1>Booking Inquiry</h1>
+      <p>Fill out this form and include your preferred dates of stay. We will get back to you within 2 business days.</p>
+      <form action="action_page.php">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="isla@islatranquila.com">
+        
+
+        <label for="inquiry">Message</label>
+        <textarea id="subject" name="inquiry" placeholder="Write something.." style="height:200px">
+        </textarea>
+
+        <input type="submit" value="Submit" aria-label="send booking inquiry">
+
+      </form>
+    </section>
+    <footer>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+    </footer>
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>

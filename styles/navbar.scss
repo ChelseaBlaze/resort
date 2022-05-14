@@ -1,0 +1,181 @@
+@import "variables";
+
+//Desktop and small screen navbar
+.container-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 99;
+  background-color: $base-teal;
+  a {
+    color: white;
+    font-size: 2.8vh;
+    font-family: LucymarSansRegular, serif, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    //flex-wrap: wrap;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.navbox1 {
+  padding: 0 0 0 3vw;
+  align-items: center;
+  a {
+    font-family: Caveat, serif, sans-serif;
+    text-decoration: none;
+    font-size: 200%;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.navbox2 {
+  display: flex; //Only positions items within this div
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
+}
+
+@media screen and (max-width: 1900px) {
+  .navbox1 {
+    width: 25vw;
+  }
+
+  .navbox2 {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container-nav {
+    a {
+      font-size: 2.6vh;
+    }
+  }
+  .navbox1 {
+    width: 25vw;
+    padding-left: 3vw;
+    a {
+      font-size: 200%;
+    }
+  }
+
+  .navbox2 {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-nav {
+    display: none;
+  }
+}
+
+//Hamburger Menu on mobile
+
+.container-burger-nav {
+  display: flex;
+  flex-direction: row; //Pushes image div and menu div to opposite ends
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 97;
+  background-color: $base-teal;
+  a {
+    font-family: caveat, serif, sans-serif;
+    font-size: 175%;
+    color: white;
+    padding-left: 15px;
+    text-decoration: none;
+  }
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 40px;
+  cursor: pointer;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 99;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%; //won't be on screen when not pressed
+  width: 100%;
+  min-height: 100vh;
+  z-index: 98;
+  background-color: $base-teal;
+  padding-top: 120px;
+  transition: 0.4s;
+  a {
+    display: block;
+    text-align: center;
+    font-size: 150%;
+    font-family: LucymarSansRegular, serif, sans-serif;
+    width: 100%;
+    max-width: 55vw;
+    margin: 0 auto 16px;
+    padding: 12px 16px;
+    background-color: $base-light;
+    color: #195d5f;
+    text-decoration: none;
+  }
+  a:hover {
+    background-color: $base-tan;
+  }
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
